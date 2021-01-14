@@ -23,6 +23,7 @@
     <ProjectGuid>{6C1E389D-23B7-4E40-AB00-1E3D1F1083FC}</ProjectGuid>
     <RootNamespace>DataStructure</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>DataStructure</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -124,6 +125,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArrayList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
