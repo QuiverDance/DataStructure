@@ -104,4 +104,4 @@ ArrayListNode ArrayList::getElement(int positon)
 			return pElement[positon];
 		}
 	}
-}
+} 

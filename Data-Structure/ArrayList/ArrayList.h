@@ -20,4 +20,4 @@ private:
 	int maxElementCount;
 	int currentElementCount;
 	ArrayListNode* pElement;
-};
+}; 

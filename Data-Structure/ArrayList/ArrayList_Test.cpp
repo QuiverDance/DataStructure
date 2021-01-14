@@ -27,5 +27,4 @@ int main(void)
 
 	arrayList.deleteList();
 	arrayList.displayList();
-
 }
