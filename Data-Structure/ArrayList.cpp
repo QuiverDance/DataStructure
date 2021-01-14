@@ -37,6 +37,10 @@ void ArrayList::addElement(int positon, ArrayListNode element)
 		{
 			if (!isFull())
 			{
+				for (int i = positon; i < currentElementCount; i++)
+				{
+					pElement[positon + 1] = pElement[positon];
+				}
 				pElement[positon] = element;
 				currentElementCount++;
 				std::cout << "원소 추가 성공." << std::endl;
