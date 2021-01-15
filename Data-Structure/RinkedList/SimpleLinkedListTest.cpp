@@ -21,4 +21,4 @@ int main(void)
 
 	std::cout << simpleLinkedList.getElement(3)->data << std::endl;
 	std::cout << "Length: " << simpleLinkedList.getListLength() << std::endl;
-}
+} 

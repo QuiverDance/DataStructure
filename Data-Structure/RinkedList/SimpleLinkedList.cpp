@@ -95,4 +95,4 @@ void SimpleLinkedList::displayList()
 		pPreNode = pPreNode->pLink;
 		std::cout << "Data: " << pPreNode->data << std::endl;
 	}
-}
+} 
