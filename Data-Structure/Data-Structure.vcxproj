@@ -21,11 +21,14 @@
   <ItemGroup>
     <ClCompile Include="ArrayList\ArrayList.cpp" />
     <ClCompile Include="ArrayList\ArrayList_Test.cpp" />
+    <ClCompile Include="CircularLinkedList.cpp" />
+    <ClCompile Include="CircularLinkedListTest.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedList.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedListTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h" />
+    <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
