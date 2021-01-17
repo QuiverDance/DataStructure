@@ -11,12 +11,11 @@ CircularLinkedList::CircularLinkedList()
 
 void CircularLinkedList::addElement(int position, ListNode element)
 {
-	ListNode* pNewNode = new ListNode;
-	*pNewNode = element;
-	pNewNode->pLink = nullptr;
-
 	if (position >= 0 && position <= currentElementCount)
 	{
+		ListNode* pNewNode = new ListNode;
+		*pNewNode = element;
+		
 		if (position == 0)
 		{
 			if (currentElementCount == 0)
@@ -49,10 +48,10 @@ void CircularLinkedList::addElement(int position, ListNode element)
 		}
 
 		currentElementCount++;
-		std::cout << "³ëµå Ãß°¡ ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì¶”ê°€ ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Ãß°¡ ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì¶”ê°€ ì‹¤íŒ¨." << std::endl;
 }
 
 void CircularLinkedList::removeElement(int position)
@@ -91,10 +90,10 @@ void CircularLinkedList::removeElement(int position)
 
 		delete pDelNode;
 		currentElementCount--;
-		std::cout << "³ëµå Á¦°Å ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì œê±° ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Á¦°Å ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì œê±° ì‹¤íŒ¨." << std::endl;
 }
 
 ListNode* CircularLinkedList::getElement(int positon)
