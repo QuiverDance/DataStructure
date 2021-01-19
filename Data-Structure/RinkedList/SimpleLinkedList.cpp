@@ -9,16 +9,15 @@ SimpleLinkedList::SimpleLinkedList()
 	headerNode.pLink = nullptr;
 }
 
-void SimpleLinkedList::addElement(int positon, ListNode element)
+void SimpleLinkedList::addElement(int position, ListNode element)
 {
-	ListNode* pNewNode = new ListNode;
-	*pNewNode = element;
-	pNewNode->pLink = nullptr;
-	
-	if (positon >= 0 && positon <= currentElementCount)
+	if (position >= 0 && position <= currentElementCount)
 	{
+		ListNode* pNewNode = new ListNode;
+		*pNewNode = element;
 		ListNode* pPreNode = &headerNode;
-		for (int i = 0; i < positon; i++)
+		
+		for (int i = 0; i < position; i++)
 		{
 			pPreNode = pPreNode->pLink;
 		}
@@ -27,10 +26,10 @@ void SimpleLinkedList::addElement(int positon, ListNode element)
 		pPreNode->pLink = pNewNode;
 
 		currentElementCount++;
-		std::cout << "³ëµå Ãß°¡ ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì¶”ê°€ ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Ãß°¡ ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì¶”ê°€ ì‹¤íŒ¨." << std::endl;
 }
 
 void SimpleLinkedList::removeElement(int position)
@@ -42,16 +41,16 @@ void SimpleLinkedList::removeElement(int position)
 		{
 			pPreNode = pPreNode->pLink;
 		}
-		ListNode* pOldElement = pPreNode->pLink;
-		pPreNode->pLink = pOldElement->pLink;
-		pOldElement->pLink = nullptr;
+		ListNode* pDelNode = pPreNode->pLink;
+		pPreNode->pLink = pDelNode->pLink;
+		pDelNode->pLink = nullptr;
 
-		delete pOldElement;
+		delete pDelNode;
 		currentElementCount--;
-		std::cout << "³ëµå Á¦°Å ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì œê±° ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Á¦°Å ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì œê±° ì‹¤íŒ¨." << std::endl;
 }
 
 ListNode* SimpleLinkedList::getElement(int positon)
