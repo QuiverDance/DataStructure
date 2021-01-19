@@ -28,10 +28,10 @@ void DoublyLinkedList::addElement(int position, ListNode element)
 		pPreNode->pRLink->pLLink = pNewNode;
 
 		currentElementCount++;
-		std::cout << "³ëµå Ãß°¡ ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì¶”ê°€ ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Ãß°¡ ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì¶”ê°€ ì‹¤íŒ¨." << std::endl;
 }
 
 void DoublyLinkedList::removeElement(int position)
@@ -50,10 +50,10 @@ void DoublyLinkedList::removeElement(int position)
 
 		delete pDelNode;
 		currentElementCount--;
-		std::cout << "³ëµå Á¦°Å ¼º°ø." << std::endl;
+		std::cout << "ë…¸ë“œ ì œê±° ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "Error: ³ëµå Á¦°Å ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ë…¸ë“œ ì œê±° ì‹¤íŒ¨." << std::endl;
 }
 
 ListNode* DoublyLinkedList::getElement(int positon)
@@ -97,4 +97,9 @@ void DoublyLinkedList::displayList()
 		pPreNode = pPreNode->pRLink;
 		std::cout << "Data: " << pPreNode->data << std::endl;
 	}
+}
+
+DoublyLinkedList::~DoublyLinkedList()
+{
+	deleteList();
 }
