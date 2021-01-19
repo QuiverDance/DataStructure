@@ -138,3 +138,8 @@ void CircularLinkedList::displayList()
 		std::cout << "Data: " << pPreNode->data << std::endl;
 	}
 } 
+
+CircularLinkedList::CircularLinkedList()
+{
+	deleteList();
+}
