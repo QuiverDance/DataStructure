@@ -27,12 +27,15 @@
     <ClCompile Include="RinkedList\DoublyLinkedListTest.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedList.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedListTest.cpp" />
+    <ClCompile Include="Stack\ArrayStack.cpp" />
+    <ClCompile Include="Stack\ArrayStackTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h" />
     <ClInclude Include="RinkedList\CircularLinkedList.h" />
     <ClInclude Include="RinkedList\DoublyLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
+    <ClInclude Include="Stack\ArrayStack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
