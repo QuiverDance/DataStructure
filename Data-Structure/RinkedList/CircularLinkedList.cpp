@@ -139,7 +139,7 @@ void CircularLinkedList::displayList()
 	}
 } 
 
-CircularLinkedList::CircularLinkedList()
+CircularLinkedList::~CircularLinkedList()
 {
 	deleteList();
 }
