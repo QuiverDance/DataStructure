@@ -95,3 +95,9 @@ void SimpleLinkedList::displayList()
 		std::cout << "Data: " << pPreNode->data << std::endl;
 	}
 } 
+
+SimpleLinkedList::~SimpleLinkedList()
+{
+	deleteList();
+}
+
