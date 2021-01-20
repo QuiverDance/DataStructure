@@ -29,6 +29,8 @@
     <ClCompile Include="RinkedList\SimpleLinkedListTest.cpp" />
     <ClCompile Include="Stack\ArrayStack.cpp" />
     <ClCompile Include="Stack\ArrayStackTest.cpp" />
+    <ClCompile Include="Stack\LinkedListStack.cpp" />
+    <ClCompile Include="Stack\LinkedListStackTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h" />
@@ -36,6 +38,7 @@
     <ClInclude Include="RinkedList\DoublyLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
     <ClInclude Include="Stack\ArrayStack.h" />
+    <ClInclude Include="Stack\LinkedListStack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
