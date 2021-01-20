@@ -16,6 +16,8 @@ public:
 	int getListLength();
 	void deleteList();
 	void displayList();
+	
+	~SimpleLinkedList();
 private:
 	int currentElementCount;
 	ListNode headerNode;

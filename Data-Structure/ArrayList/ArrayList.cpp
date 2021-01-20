@@ -11,7 +11,7 @@ ArrayList::ArrayList(int maxElementCount)
 	}
 	else
 	{
-		std::cout << "Error: ÃÖ´ë¿ø¼Ò°³¼ö´Â 0º¸´Ù Ä¿¾ßÇÕ´Ï´Ù." << std::endl;
+		std::cout << "Error: ìµœëŒ€ì›ì†Œê°œìˆ˜ëŠ” 0ë³´ë‹¤ ì»¤ì•¼í•©ë‹ˆë‹¤." << std::endl;
 		return;
 	}
 }
@@ -45,12 +45,12 @@ void ArrayList::addElement(int positon, ArrayListNode element)
 				pElement[positon] = element;
 				currentElementCount++;
 
-				std::cout << "¿ø¼Ò Ãß°¡ ¼º°ø." << std::endl;
+				std::cout << "ì›ì†Œ ì¶”ê°€ ì„±ê³µ." << std::endl;
 				return;
 			}
 		}
 	}
-	std::cout << "Error: ¿ø¼Ò Ãß°¡ ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ì›ì†Œ ì¶”ê°€ ì‹¤íŒ¨." << std::endl;
 }
 
 void ArrayList::removeElement(int positon)
@@ -67,12 +67,12 @@ void ArrayList::removeElement(int positon)
 				}
 
 				currentElementCount--;
-				std::cout << "¿ø¼Ò Á¦°Å ¼º°ø." << std::endl;
+				std::cout << "ì›ì†Œ ì œê±° ì„±ê³µ." << std::endl;
 				return;
 			}
 		}
 	}
-	std::cout << "Error: ¿ø¼Ò Á¦°Å ½ÇÆÐ." << std::endl;
+	std::cout << "Error: ì›ì†Œ ì œê±° ì‹¤íŒ¨." << std::endl;
 }
 
 void ArrayList::clearList()
@@ -105,3 +105,8 @@ ArrayListNode ArrayList::getElement(int positon)
 		}
 	}
 } 
+
+ArrayList::~ArrayList()
+{
+	deleteList();
+}

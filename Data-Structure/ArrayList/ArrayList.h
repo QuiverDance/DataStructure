@@ -15,7 +15,8 @@ public:
 	void displayList();
 	int getListLength();
 	ArrayListNode getElement(int positon);
-
+	
+	~ArrayList();
 private:
 	int maxElementCount;
 	int currentElementCount;

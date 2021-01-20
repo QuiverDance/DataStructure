@@ -6,7 +6,6 @@ typedef struct ListNodeType {
 }ListNode;
 
 class CircularLinkedList {
-
 public:
 	CircularLinkedList();
 	void addElement(int positon, ListNode element);
@@ -16,6 +15,8 @@ public:
 	int getListLength();
 	void deleteList();
 	void displayList();
+	
+	~CircularLinkedList();
 private:
 	int currentElementCount;
 	ListNode headerNode;

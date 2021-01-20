@@ -7,7 +7,6 @@ typedef struct ListNodeType {
 }ListNode;
 
 class DoublyLinkedList {
-
 public:
 	DoublyLinkedList();
 	void addElement(int positon, ListNode element);
@@ -17,6 +16,8 @@ public:
 	int getListLength();
 	void deleteList();
 	void displayList();
+	
+	~DoublyLinkedList();
 private:
 	int currentElementCount;
 	ListNode headerNode;
