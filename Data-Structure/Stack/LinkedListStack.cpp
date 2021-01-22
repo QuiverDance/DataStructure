@@ -15,7 +15,7 @@ LinkedListStack::~LinkedListStack()
 
 void LinkedListStack::push(StackNode element)
 {
-	if (element.data != NULL)
+	if (true)
 	{
 		StackNode* pNewNode = new StackNode;
 		*pNewNode = element;
@@ -82,7 +82,7 @@ void LinkedListStack::displayStack()
 		StackNode* pCurNode = pTopElement;
 		while (pCurNode != nullptr)
 		{
-			std::cout << "Data: " << pCurNode->data << std::endl;
+			std::cout << "Data: " << pCurNode->data.value << std::endl;
 			pCurNode = pCurNode->pLink;
 		}
 	}

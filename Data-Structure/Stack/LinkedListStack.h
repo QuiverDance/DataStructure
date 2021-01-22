@@ -1,7 +1,14 @@
 #pragma once
 
+typedef enum PreceDenceType { lparen, rparen, times, divide, plus, minus, operand } Precedence;
+
+typedef struct ExprTokenType {
+	float value;
+	Precedence type;
+} ExprToken;
+
 typedef struct StackNodeType {
-	char data;
+	ExprToken data;
 	struct StackNodeType* pLink;
 }StackNode;
 
