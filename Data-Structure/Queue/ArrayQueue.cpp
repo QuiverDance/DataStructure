@@ -93,4 +93,4 @@ void ArrayQueue::displayQueue()
 		index = i % maxElementCount;
 		std::cout << index << " Data :" << pElement[index].element << std::endl;
 	}
-}
+} 
