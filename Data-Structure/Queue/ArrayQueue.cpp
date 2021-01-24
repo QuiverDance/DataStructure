@@ -68,7 +68,8 @@ void ArrayQueue::deleteQueue()
 
 bool ArrayQueue::isFull()
 {
-	if (currentElementCount == maxElementCount - 1)
+	if (currentElementCount == maxElementCount 
+	   	|| rear == maxElementCount - 1)
 		return true;
 	return false;
 }
