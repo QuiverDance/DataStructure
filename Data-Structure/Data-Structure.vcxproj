@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="ArrayList\ArrayList.cpp" />
     <ClCompile Include="ArrayList\ArrayList_Test.cpp" />
+    <ClCompile Include="Queue\ArrayQueue.cpp" />
+    <ClCompile Include="Queue\ArrayQueueTest.cpp" />
     <ClCompile Include="RinkedList\CircularLinkedList.cpp" />
     <ClCompile Include="RinkedList\CircularLinkedListTest.cpp" />
     <ClCompile Include="RinkedList\DoublyLinkedList.cpp" />
@@ -36,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h" />
+    <ClInclude Include="Queue\ArrayQueue.h" />
     <ClInclude Include="RinkedList\CircularLinkedList.h" />
     <ClInclude Include="RinkedList\DoublyLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
