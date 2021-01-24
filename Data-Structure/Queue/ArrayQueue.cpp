@@ -23,11 +23,11 @@ void ArrayQueue::enqueue(ArrayQueueNode element)
 		{
 			pElement[++rear] = element;
 			currentElementCount++;
-			std::cout << "Enqueue 己傍." << std::endl;
+			std::cout << "Enqueue 靹标车." << std::endl;
 			return;
 		}
 	}
-	std::cout << "Enqueue 角菩." << std::endl;
+	std::cout << "Enqueue 鞁ろ尐." << std::endl;
 }
 
 ArrayQueueNode* ArrayQueue::dequeue()
@@ -39,11 +39,11 @@ ArrayQueueNode* ArrayQueue::dequeue()
 		{
 			pDequeueNode->element = pElement[++front].element;
 			currentElementCount--;
-			std::cout << "Dequeue 己傍." << std::endl;
+			std::cout << "Dequeue 靹标车." << std::endl;
 			return pDequeueNode;
 		}
 	}
-	std::cout << "Dequeue 角菩." << std::endl;
+	std::cout << "Dequeue 鞁ろ尐." << std::endl;
 }
 
 ArrayQueueNode* ArrayQueue::peek()
@@ -52,10 +52,10 @@ ArrayQueueNode* ArrayQueue::peek()
 	{
 		ArrayQueueNode* pPeekNode;
 		pPeekNode = &pElement[front + 1];
-		std::cout << "Peek 己傍." << std::endl;
+		std::cout << "Peek 靹标车." << std::endl;
 		return pPeekNode;
 	}
-	std::cout << "Peek 角菩." << std::endl;
+	std::cout << "Peek 鞁ろ尐." << std::endl;
 }
 
 void ArrayQueue::deleteQueue()
@@ -68,7 +68,7 @@ void ArrayQueue::deleteQueue()
 
 bool ArrayQueue::isFull()
 {
-	if (currentElementCount == maxElementCount)
+	if (currentElementCount == maxElementCount - 1)
 		return true;
 	return false;
 }
