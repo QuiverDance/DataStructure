@@ -14,8 +14,30 @@ int main(void)
 	}
 	queue.displayQueue();
 
-	std::cout << "Dequeue: " << queue.dequeue()->element << std::endl;
+	ArrayQueueNode* pDelNode;
+	pDelNode = queue.dequeue();
+	std::cout << "Dequeue: " << pDelNode->element << std::endl;
 	std::cout << "Peek: " << queue.peek()->element << std::endl;
+	
+	delete pDelNode;
+	queue.displayQueue();
 
+	for (int i = 5; i < 11; i++)
+	{
+		node.element = 'a' + i;
+		queue.enqueue(node);
+	}
+	queue.displayQueue();
+	for (int i = 0; i < 5; i++)
+	{
+		pDelNode = queue.dequeue();
+		delete pDelNode;
+	}
+	queue.displayQueue();
+	for (int i = 11; i < 16; i++)
+	{
+		node.element = 'a' + i;
+		queue.enqueue(node);
+	}
 	queue.displayQueue();
 }

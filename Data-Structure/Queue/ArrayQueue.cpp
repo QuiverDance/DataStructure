@@ -21,7 +21,8 @@ void ArrayQueue::enqueue(ArrayQueueNode element)
 	{
 		if (element.element)
 		{
-			pElement[++rear] = element;
+			rear = (rear + 1) % maxElementCount;
+			pElement[rear] = element;
 			currentElementCount++;
 			std::cout << "Enqueue 성공." << std::endl;
 			return;
@@ -37,7 +38,8 @@ ArrayQueueNode* ArrayQueue::dequeue()
 		ArrayQueueNode* pDequeueNode = new ArrayQueueNode;
 		if (pDequeueNode)
 		{
-			pDequeueNode->element = pElement[++front].element;
+			front = (front + 1) % maxElementCount;
+			pDequeueNode->element = pElement[front].element;
 			currentElementCount--;
 			std::cout << "Dequeue 성공." << std::endl;
 			return pDequeueNode;
@@ -83,8 +85,11 @@ bool ArrayQueue::isEmpty()
 void ArrayQueue::displayQueue()
 {
 	std::cout << "Front: " << front << " Rear: " << rear << std::endl;
-	for (int i = front + 1; i <= rear; i++)
+	int maxIndex = front + currentElementCount;
+	int index = 0;
+	for (int i = front + 1; i <= maxIndex; i++)
 	{
-		std::cout << i << " Data :" << pElement[i].element << std::endl;
+		index = i % maxElementCount;
+		std::cout << index << " Data :" << pElement[index].element << std::endl;
 	}
 }
