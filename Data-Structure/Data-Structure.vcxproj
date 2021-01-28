@@ -39,6 +39,8 @@
     <ClCompile Include="Stack\ExprdefTest.cpp" />
     <ClCompile Include="Stack\LinkedListStack.cpp" />
     <ClCompile Include="Stack\LinkedListStackTest.cpp" />
+    <ClCompile Include="Tree\BinaryTree.cpp" />
+    <ClCompile Include="Tree\BinaryTreeTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h" />
@@ -51,6 +53,7 @@
     <ClInclude Include="Stack\ArrayStack.h" />
     <ClInclude Include="Stack\Exprdef.h" />
     <ClInclude Include="Stack\LinkedListStack.h" />
+    <ClInclude Include="Tree\BinaryTree.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
