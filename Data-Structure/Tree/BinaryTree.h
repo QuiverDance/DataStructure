@@ -19,7 +19,11 @@ public:
 	void deleteTreeNode(BinTreeNode* pDelNode);
 	void preorderTraversalRecursiveTree(BinTreeNode* pParentNode);
 	void inorderTraversalRecursiveTree(BinTreeNode* pParentNode);
-	void postorderTraversalRecursiveTree(BinTreeNode* pRootNode);
+	void postorderTraversalRecursiveTree(BinTreeNode* pParentNode);
+	int getNodeCount(BinTreeNode* pParentNode);
+	int getLeafNodeCount(BinTreeNode* pParentNode);
+	int getHeight(BinTreeNode* pParentNode);
+	void displayTree(BinTreeNode* pParentNode, int level, char type);
 private:
 	BinTreeNode* pRootNode;
 };

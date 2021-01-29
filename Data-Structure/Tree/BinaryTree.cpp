@@ -123,3 +123,70 @@ void BinaryTree::postorderTraversalRecursiveTree(BinTreeNode* pParentNode)
 		std::cout << pParentNode->data << " ";
 	}
 }
+
+int BinaryTree::getNodeCount(BinTreeNode* pParentNode)
+{
+	int count = 0;
+	if (pParentNode != nullptr)
+	{
+		count = getNodeCount(pParentNode->pLeftChild) + getNodeCount(pParentNode->pRightChild) + 1;
+	}
+	return count;
+}
+
+int BinaryTree::getLeafNodeCount(BinTreeNode* pParentNode)
+{
+	int count = 0;
+	if (pParentNode)
+	{
+		if (pParentNode->pLeftChild == nullptr && pParentNode->pRightChild == nullptr)
+		{
+			return 1;
+		}
+		else
+		{
+			count = getLeafNodeCount(pParentNode->pLeftChild) + getLeafNodeCount(pParentNode->pRightChild);
+		}
+	}
+	return count;
+}
+
+int BinaryTree::getHeight(BinTreeNode* pParentNode)
+{
+	int height = 0;
+	if (pParentNode)
+	{
+		if (pParentNode->pLeftChild == nullptr && pParentNode->pRightChild == nullptr)
+		{
+			return 1;
+		}
+		else
+		{
+			int leftChildHeight = getHeight(pParentNode->pLeftChild);
+			int rightChildHeight = getHeight(pParentNode->pRightChild);
+			if (leftChildHeight > rightChildHeight)
+				height = leftChildHeight + 1;
+			else
+				height = rightChildHeight + 1;
+		}
+	}
+	return height;
+}
+
+void BinaryTree::displayTree(BinTreeNode* pParentNode, int level, char type)
+{
+	for (int i = 0; i < level; i++)
+	{
+		std::cout << "    ";
+	}
+	if (pParentNode)
+	{
+		std::cout << "[" << level << "," << type << "] " << pParentNode->data << std::endl;
+		displayTree(pParentNode->pLeftChild, level + 1, 'L');
+		displayTree(pParentNode->pRightChild, level + 1, 'R');
+	}
+	else
+	{
+		std::cout << "Null" << std::endl;
+	}
+}

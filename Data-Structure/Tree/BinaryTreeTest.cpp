@@ -30,5 +30,10 @@ int main(void)
 	tree->inorderTraversalRecursiveTree(pNodeA); std::cout << std::endl;
 	std::cout << "postorder: ";
 	tree->postorderTraversalRecursiveTree(pNodeA); std::cout << std::endl;
+	std::cout << "Node count: " << tree->getNodeCount(pNodeA) << std::endl;
+	std::cout << "Leaf node count: " << tree->getLeafNodeCount(pNodeA) << std::endl;
+	std::cout << "Height of tree: " << tree->getHeight(pNodeA) << std::endl;
+
+	tree->displayTree(pNodeA, 1, 'A');
 	delete tree;
 }
