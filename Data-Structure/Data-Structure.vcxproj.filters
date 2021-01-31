@@ -81,6 +81,12 @@
     <ClCompile Include="Tree\BinaryTreeTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Tree\ArrayHeap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree\ArrayHeapTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h">
@@ -114,6 +120,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Tree\BinaryTree.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree\ArrayHeap.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
