@@ -41,6 +41,8 @@
     <ClCompile Include="Stack\LinkedListStackTest.cpp" />
     <ClCompile Include="Tree\ArrayHeap.cpp" />
     <ClCompile Include="Tree\ArrayHeapTest.cpp" />
+    <ClCompile Include="Tree\BinarySearchTree.cpp" />
+    <ClCompile Include="Tree\BinarySearchTreeTest.cpp" />
     <ClCompile Include="Tree\BinaryTree.cpp" />
     <ClCompile Include="Tree\BinaryTreeTest.cpp" />
   </ItemGroup>
@@ -56,6 +58,7 @@
     <ClInclude Include="Stack\Exprdef.h" />
     <ClInclude Include="Stack\LinkedListStack.h" />
     <ClInclude Include="Tree\ArrayHeap.h" />
+    <ClInclude Include="Tree\BinarySearchTree.h" />
     <ClInclude Include="Tree\BinaryTree.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
