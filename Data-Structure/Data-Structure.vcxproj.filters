@@ -93,6 +93,12 @@
     <ClCompile Include="Tree\BinarySearchTreeTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Graph\ArrayGraph.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\ArrayGraphTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h">
@@ -132,6 +138,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Tree\BinarySearchTree.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\ArrayGraph.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
