@@ -93,8 +93,10 @@ void BinSearchTree::deleteElement(int key)
 	}
 	else if (pDelNode->pLeftChild != nullptr && pDelNode->pRightChild != nullptr)
 	{
-		BinSearchTreeNode* pPredecessor = pDelNode;
-		BinSearchTreeNode* pSuccessor = pDelNode->pLeftChild;
+		BinSearchTreeNode* pPredecessor = nullptr;
+		BinSearchTreeNode* pSuccessor = nullptr;
+		pPredecessor = pDelNode;
+		pSuccessor = pDelNode->pLeftChild;
 		while (pSuccessor->pRightChild != nullptr)
 		{
 			pPredecessor = pSuccessor;
@@ -174,7 +176,7 @@ void BinSearchTree::displayTree(BinSearchTreeNode* pParentNode, int level, char 
 	for (int i = 0; i < level; i++)
 		std::cout << "	";
 
-	if (pParentNode != nullptr)
+	if (pParentNode)
 	{
 		std::cout << "[" << level << ", " << type << "] " << pParentNode->key << std::endl;
 		displayTree(pParentNode->pLeftChild, level + 1, 'L');

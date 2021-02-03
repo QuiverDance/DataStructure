@@ -1,6 +1,6 @@
 #include "BinaryTree.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	BinaryTree* tree = nullptr;
@@ -36,4 +36,4 @@ int main(void)
 
 	tree->displayTree(pNodeA, 1, 'A');
 	delete tree;
-}
+}*/

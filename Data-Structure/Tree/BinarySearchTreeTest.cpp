@@ -30,6 +30,7 @@ int main(void)
 	pRootNode = tree->getRootNode();
 	tree->displayTree(pRootNode, 1, 'A');
 
-	tree->deleteElement(15);
+	tree->deleteElement(5);
+	pRootNode = tree->getRootNode();
 	tree->displayTree(pRootNode, 1, 'A');
 }
