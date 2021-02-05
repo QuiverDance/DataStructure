@@ -1,5 +1,6 @@
 #pragma once
 #include "GraphLinkedList.h"
+#include "GraphLinkedStack.h"
 
 enum GraphType
 {
@@ -23,6 +24,10 @@ public:
 	void deleteGraphNode(LinkedList* pList, int delVertexID);
 	int findGraphNodePosition(LinkedList* pList, int vertexID);
 	void displayGraph();
+
+	void traversalDFS(int startVertexID);
+	void pushForDFS(LinkedStack* pStack, int nodeID);
+	void traversalBFS(int startVertexID);
 private:
 	int maxVertexCount;
 	int currentVertexCount;

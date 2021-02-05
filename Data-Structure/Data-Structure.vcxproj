@@ -26,6 +26,8 @@
     <ClCompile Include="Graph\ArrayGraph.cpp" />
     <ClCompile Include="Graph\ArrayGraphTest.cpp" />
     <ClCompile Include="Graph\GraphLinkedList.cpp" />
+    <ClCompile Include="Graph\GraphLinkedStack.cpp" />
+    <ClCompile Include="Graph\GraphTraversalTest.cpp" />
     <ClCompile Include="Graph\LinkedGraph.cpp" />
     <ClCompile Include="Graph\LinkedGraphTest.cpp" />
     <ClCompile Include="Queue\ArrayQueue.cpp" />
@@ -56,6 +58,7 @@
     <ClInclude Include="Deque\LinkedListDeque.h" />
     <ClInclude Include="Graph\ArrayGraph.h" />
     <ClInclude Include="Graph\GraphLinkedList.h" />
+    <ClInclude Include="Graph\GraphLinkedStack.h" />
     <ClInclude Include="Graph\LinkedGraph.h" />
     <ClInclude Include="Queue\ArrayQueue.h" />
     <ClInclude Include="Queue\LinkedListQueue.h" />

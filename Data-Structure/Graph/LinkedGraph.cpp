@@ -143,3 +143,52 @@ void LinkedGraph::displayGraph()
 	}
 	std::cout << std::endl;
 }
+
+void LinkedGraph::traversalDFS(int startVertexID)
+{
+	LinkedStack* pStack = new LinkedStack();
+	bool* pVisited = new bool[maxVertexCount];
+
+	for (int i = 0; i < maxVertexCount; i++)
+		pVisited[i] = false;
+	pVisited[startVertexID] = true;
+	pushForDFS(pStack, startVertexID);
+
+	StackNode* pStackNode = nullptr;
+	ListNode* pListNode = nullptr;
+	int curVertexID = 0;
+	while (!pStack->isEmpty())
+	{
+		pStackNode = pStack->pop();
+		if (pStackNode)
+		{
+			curVertexID = pStackNode->data;
+			std::cout << "[" << curVertexID << "] " << "¹æ¹®" << std::endl;
+
+			pListNode = ppAdjcantEdge[curVertexID]->getHeaderNode().pLink;
+			while (pListNode != nullptr)
+			{
+				int vertexID = pListNode->data.vertexID;
+				if (pVisited[vertexID] == false)
+				{
+					pVisited[vertexID] = true;
+					pushForDFS(pStack, vertexID);
+				}
+				pListNode = pListNode->pLink;
+			}
+		}
+	}
+	delete []pVisited;
+	delete pStack;
+}
+
+void LinkedGraph::pushForDFS(LinkedStack* pStack, int nodeID)
+{
+	StackNode node = { 0, };
+	node.data = nodeID;
+	pStack->push(node);
+}
+
+void LinkedGraph::traversalBFS(int startVertexID)
+{
+}
