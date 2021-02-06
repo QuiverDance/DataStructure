@@ -191,4 +191,45 @@ void LinkedGraph::pushForDFS(LinkedStack* pStack, int nodeID)
 
 void LinkedGraph::traversalBFS(int startVertexID)
 {
+	LinkedQueue* pQueue = new LinkedQueue();
+	bool* pVisited = new bool[maxVertexCount];
+
+	for (int i = 0; i < maxVertexCount; i++)
+		pVisited[i] = false;
+	pVisited[startVertexID] = true;
+	enqueueForBFS(pQueue, startVertexID);
+
+	QueueNode* pQueueNode = nullptr;
+	ListNode* pListNode = nullptr;
+	int curVertexID = 0;
+	while (!pQueue->isEmpty())
+	{
+		pQueueNode = pQueue->dequeue();
+		if (pQueueNode)
+		{
+			curVertexID = pQueueNode->data;
+			std::cout << "[" << curVertexID << "] " << "¹æ¹®" << std::endl;
+
+			pListNode = ppAdjcantEdge[curVertexID]->getHeaderNode().pLink;
+			while (pListNode != nullptr)
+			{
+				int vertexID = pListNode->data.vertexID;
+				if (pVisited[vertexID] == false)
+				{
+					pVisited[vertexID] = true;
+					enqueueForBFS(pQueue, vertexID);
+				}
+				pListNode = pListNode->pLink;
+			}
+		}
+	}
+	delete[]pVisited;
+	delete pQueue;
+}
+
+void LinkedGraph::enqueueForBFS(LinkedQueue* pQueue, int nodeID)
+{
+	QueueNode node = { 0, };
+	node.data = nodeID;
+	pQueue->enqueue(node);
 }

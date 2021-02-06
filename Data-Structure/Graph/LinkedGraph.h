@@ -1,6 +1,7 @@
 #pragma once
 #include "GraphLinkedList.h"
 #include "GraphLinkedStack.h"
+#include "GraphLinkedQueue.h"
 
 enum GraphType
 {
@@ -28,6 +29,7 @@ public:
 	void traversalDFS(int startVertexID);
 	void pushForDFS(LinkedStack* pStack, int nodeID);
 	void traversalBFS(int startVertexID);
+	void enqueueForBFS(LinkedQueue* pQueue, int nodeID);
 private:
 	int maxVertexCount;
 	int currentVertexCount;
