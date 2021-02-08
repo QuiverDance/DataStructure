@@ -233,3 +233,39 @@ void LinkedGraph::enqueueForBFS(LinkedQueue* pQueue, int nodeID)
 	node.data = nodeID;
 	pQueue->enqueue(node);
 }
+
+int LinkedGraph::getMaxVertexCount()
+{
+	return maxVertexCount;
+}
+
+int LinkedGraph::getCurrentVertexCount()
+{
+	return currentVertexCount;
+}
+
+int LinkedGraph::getCurrentEdgeCount()
+{
+	return currentEdgeCount;
+}
+
+GraphType LinkedGraph::getGraphType()
+{
+	return graphType;
+}
+
+int* LinkedGraph::GetpVertex()
+{
+	int* pReturn = new int[maxVertexCount];
+	for (int i = 0; i < maxVertexCount; i++)
+		pReturn[i] = pVertex[i];
+
+	return pReturn;
+}
+
+LinkedList** LinkedGraph::GetppEdge()
+{
+	LinkedList** ppReturn = new LinkedList * [maxVertexCount];
+	ppReturn = ppAdjcantEdge;
+	return ppReturn;
+}

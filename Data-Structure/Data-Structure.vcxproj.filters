@@ -114,6 +114,18 @@
     <ClCompile Include="Graph\GraphTraversalTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Graph\GraphLinkedQueue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\GraphArrayHeap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\MinSpanningTree.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph\MinSpanningTreeTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList\ArrayList.h">
@@ -165,6 +177,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Graph\GraphLinkedStack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\GraphLinkedQueue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\GraphArrayHeap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph\MinSpanningTree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

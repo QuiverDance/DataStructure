@@ -25,11 +25,15 @@
     <ClCompile Include="Deque\LinkedListDequeTest.cpp" />
     <ClCompile Include="Graph\ArrayGraph.cpp" />
     <ClCompile Include="Graph\ArrayGraphTest.cpp" />
+    <ClCompile Include="Graph\GraphArrayHeap.cpp" />
     <ClCompile Include="Graph\GraphLinkedList.cpp" />
+    <ClCompile Include="Graph\GraphLinkedQueue.cpp" />
     <ClCompile Include="Graph\GraphLinkedStack.cpp" />
     <ClCompile Include="Graph\GraphTraversalTest.cpp" />
     <ClCompile Include="Graph\LinkedGraph.cpp" />
     <ClCompile Include="Graph\LinkedGraphTest.cpp" />
+    <ClCompile Include="Graph\MinSpanningTree.cpp" />
+    <ClCompile Include="Graph\MinSpanningTreeTest.cpp" />
     <ClCompile Include="Queue\ArrayQueue.cpp" />
     <ClCompile Include="Queue\ArrayQueueTest.cpp" />
     <ClCompile Include="Queue\LikedListQueueTest.cpp" />
@@ -57,8 +61,11 @@
     <ClInclude Include="ArrayList\ArrayList.h" />
     <ClInclude Include="Deque\LinkedListDeque.h" />
     <ClInclude Include="Graph\ArrayGraph.h" />
+    <ClInclude Include="Graph\GraphArrayHeap.h" />
     <ClInclude Include="Graph\GraphLinkedList.h" />
+    <ClInclude Include="Graph\GraphLinkedQueue.h" />
     <ClInclude Include="Graph\GraphLinkedStack.h" />
+    <ClInclude Include="Graph\MinSpanningTree.h" />
     <ClInclude Include="Graph\LinkedGraph.h" />
     <ClInclude Include="Queue\ArrayQueue.h" />
     <ClInclude Include="Queue\LinkedListQueue.h" />

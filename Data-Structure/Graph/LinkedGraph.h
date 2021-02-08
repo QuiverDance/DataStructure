@@ -30,6 +30,13 @@ public:
 	void pushForDFS(LinkedStack* pStack, int nodeID);
 	void traversalBFS(int startVertexID);
 	void enqueueForBFS(LinkedQueue* pQueue, int nodeID);
+
+	int getMaxVertexCount();
+	int getCurrentVertexCount();
+	int getCurrentEdgeCount();
+	GraphType getGraphType();
+	int* GetpVertex();
+	LinkedList** GetppEdge();
 private:
 	int maxVertexCount;
 	int currentVertexCount;
