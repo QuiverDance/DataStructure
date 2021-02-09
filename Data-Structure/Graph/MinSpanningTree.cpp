@@ -85,13 +85,6 @@ ArrayMinHeap* orderEdges(LinkedGraph* pGraph)
 	return pOrderEdge;
 }
 
-void pushForDFS(LinkedStack* pStack, int nodeID)
-{
-	StackNode node = { 0, };
-	node.data = nodeID;
-	pStack->push(node);
-}
-
 bool checkCycle(LinkedGraph* pGraph, int formVertexID, int toVertexID)
 {
 	if (pGraph == nullptr)
@@ -144,5 +137,92 @@ bool checkCycle(LinkedGraph* pGraph, int formVertexID, int toVertexID)
 	}
 	delete[]pVisited;
 	delete pStack;
+	return false;
+}
+
+void pushForDFS(LinkedStack* pStack, int nodeID)
+{
+	StackNode node = { 0, };
+	node.data = nodeID;
+	pStack->push(node);
+}
+
+LinkedGraph* mstPrim(LinkedGraph* pGraph, int startVertexID)
+{
+	if (pGraph == nullptr)
+		return nullptr;
+	LinkedGraph* pMinSpanningTree = nullptr;
+	int maxNodeCount = pGraph->getMaxVertexCount();
+	int currentNodeCount = pGraph->getCurrentVertexCount();
+
+	pMinSpanningTree = new LinkedGraph(maxNodeCount, undirected);
+	if (pMinSpanningTree == nullptr)
+		return nullptr;
+	pMinSpanningTree->addVertex(startVertexID);
+	
+	GraphEdge minWeightEdge = { 0, };
+	int fromVertexID = 0;
+	int mstNodeCount = pMinSpanningTree->getCurrentVertexCount();
+	while (mstNodeCount < currentNodeCount)
+	{
+		minWeightEdge = { 0, 0, MAX_Weight };
+		for (int i = 0; i < maxNodeCount; i++)
+		{
+			if (pMinSpanningTree->GetpVertex()[i] == true)
+			{
+				fromVertexID = i;
+				getMinWeightEdge(pGraph, pMinSpanningTree, fromVertexID, &minWeightEdge);
+			}
+		}
+		std::cout << mstNodeCount << ": " << "[" << minWeightEdge.vertexIDFrom << ", " << minWeightEdge.vertexIDTo << "], " << minWeightEdge.weight << std::endl;
+		pMinSpanningTree->addVertex(minWeightEdge.vertexIDTo);
+		pMinSpanningTree->addWeightedEdge(minWeightEdge.vertexIDFrom, minWeightEdge.vertexIDTo, minWeightEdge.weight);
+
+		mstNodeCount = pMinSpanningTree->getCurrentEdgeCount();
+	}
+	return pMinSpanningTree;
+}
+
+void getMinWeightEdge(LinkedGraph* pGraph, LinkedGraph* pMST, int fromVertexID, GraphEdge* pMinWeightEdge)
+{
+	ListNode* pListNode = nullptr;
+	bool isCycle = NULL;
+	bool isAlready = NULL;
+	LinkedList* pEdgeList = pGraph->GetppEdge()[fromVertexID];
+
+	pListNode = pEdgeList->getHeaderNode().pLink;
+	while (pListNode != nullptr)
+	{
+		int vertexID = pListNode->data.vertexID;
+		int weight = pListNode->data.weight;
+		if (pListNode->data.weight < pMinWeightEdge->weight)
+		{
+			isAlready = checkEdge(pMST, fromVertexID, vertexID);
+			if (isAlready == false)
+			{
+				isCycle = checkCycle(pMST, fromVertexID, vertexID);
+			}
+			if (isAlready == false && isCycle == false)
+			{
+				pMinWeightEdge->vertexIDFrom = fromVertexID;
+				pMinWeightEdge->vertexIDTo = vertexID;
+				pMinWeightEdge->weight = weight;
+			}
+		}
+		pListNode = pListNode->pLink;
+	}
+}
+
+bool checkEdge(LinkedGraph* pGraph, int fromVertexID, int toVertexID)
+{
+	if (pGraph == nullptr)
+		return NULL;
+	LinkedList* pEdgeList = nullptr;
+	int position = 0;
+	
+	pEdgeList = pGraph->GetppEdge()[fromVertexID];
+	position = pGraph->findGraphNodePosition(pEdgeList, toVertexID);
+	if (position >= 0)
+		return true;
 	return false;
 }
