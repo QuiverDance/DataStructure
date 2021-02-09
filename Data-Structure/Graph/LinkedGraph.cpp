@@ -44,6 +44,7 @@ void LinkedGraph::addVertex(int vertexID)
 			
 			return;
 		}
+		return;
 	}
 	std::cout << "노드 추가 에러." << std::endl;
 }
@@ -76,7 +77,6 @@ void LinkedGraph::addWeightedEdge(int fromVertexID, int toVertexID, int weight)
 			fromNode.vertexID = fromVertexID;
 			fromNode.weight = weight;
 			addListElementForVertex(ppAdjcantEdge[toVertexID], 0, fromNode);
-			currentEdgeCount++;
 		}
 	}
 }
@@ -256,16 +256,10 @@ GraphType LinkedGraph::getGraphType()
 
 int* LinkedGraph::GetpVertex()
 {
-	int* pReturn = new int[maxVertexCount];
-	for (int i = 0; i < maxVertexCount; i++)
-		pReturn[i] = pVertex[i];
-
-	return pReturn;
+	return pVertex;
 }
 
 LinkedList** LinkedGraph::GetppEdge()
 {
-	LinkedList** ppReturn = new LinkedList * [maxVertexCount];
-	ppReturn = ppAdjcantEdge;
-	return ppReturn;
+	return ppAdjcantEdge;
 }

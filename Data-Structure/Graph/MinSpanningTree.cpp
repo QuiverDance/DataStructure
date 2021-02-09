@@ -21,19 +21,18 @@ LinkedGraph* mstKruskal(LinkedGraph* pGraph)
 
 	HeapNode* pHeapNode = nullptr;
 	bool isCycle = true;
+
 	for (int i = 0; i < currentEdgeCount; i++)
 	{
 		pHeapNode = pMinHeap->deleteElement();
 		if (pHeapNode)
 		{
-			isCycle = checkCycle(pGraph, pHeapNode->fromVertexID, pHeapNode->toVertexID);
+			isCycle = checkCycle(pMinSpanningTree, pHeapNode->fromVertexID, pHeapNode->toVertexID);
 
 			if (isCycle == false)
 			{
-				if (pMinSpanningTree->GetpVertex()[pHeapNode->fromVertexID] != 1)
-					pMinSpanningTree->addVertex(pHeapNode->fromVertexID);
-				if (pMinSpanningTree->GetpVertex()[pHeapNode->toVertexID] != 1)
-					pMinSpanningTree->addVertex(pHeapNode->toVertexID);
+				pMinSpanningTree->addVertex(pHeapNode->fromVertexID);
+				pMinSpanningTree->addVertex(pHeapNode->toVertexID);
 
 				pMinSpanningTree->addWeightedEdge(pHeapNode->fromVertexID, pHeapNode->toVertexID, pHeapNode->key);
 				std::cout << i << ": " << "[" << pHeapNode->fromVertexID << ", " << pHeapNode->toVertexID << "], " << pHeapNode->key << std::endl;
@@ -77,7 +76,7 @@ ArrayMinHeap* orderEdges(LinkedGraph* pGraph)
 					heapNode.fromVertexID = i;
 					heapNode.toVertexID = vertexID;
 					heapNode.key = weight;
-					pOrderEdge->intsetHeap(heapNode);
+					pOrderEdge->insertHeap(heapNode);
 				}
 				pListNode = pListNode->pLink;
 			}
@@ -145,5 +144,5 @@ bool checkCycle(LinkedGraph* pGraph, int formVertexID, int toVertexID)
 	}
 	delete[]pVisited;
 	delete pStack;
-
+	return false;
 }

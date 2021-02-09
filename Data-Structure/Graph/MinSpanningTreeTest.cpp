@@ -21,9 +21,6 @@ int main(void)
         pG1->addWeightedEdge(3, 5, 5);
         pG1->addWeightedEdge(4, 5, 6);
 
-        std::cout << "G1: " << std::endl;
-        pG1->displayGraph();
-
         std::cout << std::endl << "Kruskal MST: " << std::endl;
         pMST1 = mstKruskal(pG1);
         pMST1->displayGraph();

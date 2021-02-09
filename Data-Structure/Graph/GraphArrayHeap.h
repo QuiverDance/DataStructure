@@ -11,7 +11,7 @@ public:
 	ArrayMinHeap(int maxElementCount);
 	~ArrayMinHeap();
 	void deleteHeap();
-	void intsetHeap(HeapNode element);
+	void insertHeap(HeapNode element);
 	HeapNode* deleteElement();
 	void displayHeap();
 private:

@@ -18,7 +18,7 @@ void ArrayMinHeap::deleteHeap()
 	delete pElement;
 }
 
-void ArrayMinHeap::intsetHeap(HeapNode element)
+void ArrayMinHeap::insertHeap(HeapNode element)
 {
 	if (currentElementCount == maxElementCount)
 	{
@@ -33,7 +33,6 @@ void ArrayMinHeap::intsetHeap(HeapNode element)
 		index /= 2;
 	}
 	pElement[index] = element;
-	std::cout << "원소 추가 성공." << std::endl;
 }
 
 HeapNode* ArrayMinHeap::deleteElement()
@@ -62,7 +61,6 @@ HeapNode* ArrayMinHeap::deleteElement()
 				child *= 2;
 			}
 			pElement[parent] = *pLastNode;
-			std::cout << "원소 제거 성공." << std::endl;
 			return pDelNode;
 		}
 	}

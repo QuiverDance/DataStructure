@@ -26,7 +26,6 @@ void LinkedList::addElement(int position, ListNode element)
 		pPreNode->pLink = pNewNode;
 
 		currentElementCount++;
-		//std::cout << "노드 추가 성공." << std::endl;
 		return;
 	}
 	std::cout << "Error: 노드 추가 실패." << std::endl;
@@ -47,10 +46,10 @@ void LinkedList::removeElement(int position)
 
 		delete pDelNode;
 		currentElementCount--;
-		//std::cout << "노드 제거 성공." << std::endl;
+
 		return;
 	}
-	//std::cout << "Error: 노드 제거 실패." << std::endl;
+	std::cout << "Error: 노드 제거 실패." << std::endl;
 }
 
 ListNode* LinkedList::getElement(int positon)
@@ -74,6 +73,7 @@ ListNode LinkedList::getHeaderNode()
 
 void LinkedList::clearList()
 {
+
 	for (int i = 0; i < currentElementCount; i++)
 	{
 		removeElement(i);

@@ -23,7 +23,6 @@ void LinkedStack::push(StackNode element)
 		pTopElement = pNewNode;
 		currentElementCount++;
 
-		std::cout << "push 성공." << std::endl;
 		return;
 	}
 	std::cout << "push 실패." << std::endl;
@@ -38,7 +37,6 @@ StackNode* LinkedStack::pop()
 		pPopNode->pLink = nullptr;
 		currentElementCount--;
 
-		std::cout << "pop 성공." << std::endl;
 		return pPopNode;
 	}
 	std::cout << "pop 실패." << std::endl;
@@ -48,7 +46,6 @@ StackNode* LinkedStack::peek()
 {
 	if (!isEmpty())
 	{
-		std::cout << "peek 성공." << std::endl;
 		return pTopElement;
 	}
 	std::cout << "peek 실패." << std::endl;
