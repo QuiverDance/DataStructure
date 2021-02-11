@@ -5,10 +5,10 @@ typedef struct QueueNodeType {
 	struct QueueNodeType* pLink;
 } QueueNode;
 
-class LinkedQueue {
+class LinkedListQueue {
 public:
-	LinkedQueue();
-	~LinkedQueue();
+	LinkedListQueue();
+	~LinkedListQueue();
 	void enqueue(QueueNode element);
 	QueueNode* dequeue();
 	QueueNode* peek();

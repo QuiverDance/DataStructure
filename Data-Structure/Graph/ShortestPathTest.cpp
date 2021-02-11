@@ -5,6 +5,7 @@ int main(void)
 {
 	LinkedGraph* graph = new LinkedGraph(6, undirected);
 	int* pShortestPath = nullptr;
+	int** pShortestPath2 = nullptr;
 	if (!graph)
 		return 0;
 
@@ -22,6 +23,8 @@ int main(void)
 	graph->displayGraph();
 
 	pShortestPath = shortestPathDijkstra(graph, 0);
+	pShortestPath2 = shortestPathFloyd(graph);
+	pathReachability(graph);
 
 	delete graph;
 }

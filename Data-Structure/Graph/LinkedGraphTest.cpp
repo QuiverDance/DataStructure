@@ -1,5 +1,5 @@
 #include "LinkedGraph.h"
-
+/*
 int main(void)
 {
 	LinkedGraph* graph1 = new LinkedGraph(6, undirected);
@@ -51,4 +51,4 @@ int main(void)
 	delete graph2;
 	delete graph3;
 
-}
+}*/

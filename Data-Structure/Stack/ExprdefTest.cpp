@@ -1,5 +1,5 @@
 #include "Exprdef.h"
-
+/*
 int main(void)
 {
 	ExprToken* pExprTokens = new ExprToken[7];
@@ -43,4 +43,4 @@ int main(void)
 
 	ExpressionToken exp2 = ExpressionToken(pExprTokens2);
 	exp2.convertInfixToPostfix(9);
-}
+}*/

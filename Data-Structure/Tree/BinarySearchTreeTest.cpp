@@ -1,6 +1,6 @@
 #include "BinarySearchTree.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	BinSearchTree* tree = new BinSearchTree();
@@ -33,4 +33,4 @@ int main(void)
 	tree->deleteElement(5);
 	pRootNode = tree->getRootNode();
 	tree->displayTree(pRootNode, 1, 'A');
-}
+}*/

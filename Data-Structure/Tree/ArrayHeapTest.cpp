@@ -1,6 +1,6 @@
 #include "ArrayHeap.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	ArrayMaxHeap* maxHeap = new ArrayMaxHeap(10);
@@ -28,4 +28,4 @@ int main(void)
 		delete node;
 	}
 	delete maxHeap;
-}
+}*/

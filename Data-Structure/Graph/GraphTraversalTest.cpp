@@ -1,6 +1,6 @@
 #include "LinkedGraph.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	LinkedGraph* graph = new LinkedGraph(8, undirected);
@@ -25,4 +25,4 @@ int main(void)
 	graph->traversalBFS(0);
 	delete graph;
 
-}
+}*/

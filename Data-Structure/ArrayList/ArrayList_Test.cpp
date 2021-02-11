@@ -1,6 +1,6 @@
 #include "ArrayList.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	ArrayList arrayList = ArrayList(10);
@@ -28,3 +28,4 @@ int main(void)
 	arrayList.deleteList();
 	arrayList.displayList();
 }
+*/

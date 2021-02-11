@@ -1,19 +1,19 @@
 #include "LinkedListQueue.h"
 #include <iostream>
 
-LinkedQueue::LinkedQueue()
+LinkedListQueue::LinkedListQueue()
 {
 	currentElementCount = 0;
 	pFrontNode = nullptr;
 	pRearNode = pFrontNode;
 }
 
-LinkedQueue::~LinkedQueue()
+LinkedListQueue::~LinkedListQueue()
 {
 	deleteQueue();
 }
 
-void LinkedQueue::enqueue(QueueNode element)
+void LinkedListQueue::enqueue(QueueNode element)
 {
 	QueueNode* pNewNode = new QueueNode;
 	if (pNewNode)
@@ -38,7 +38,7 @@ void LinkedQueue::enqueue(QueueNode element)
 	std::cout << "Enqueue 실패." << std::endl;
 }
 
-QueueNode* LinkedQueue::dequeue()
+QueueNode* LinkedListQueue::dequeue()
 {
 	if (!isEmpty())
 	{
@@ -59,7 +59,7 @@ QueueNode* LinkedQueue::dequeue()
 	std::cout << "Dequeue 실패." << std::endl;
 }
 
-QueueNode* LinkedQueue::peek()
+QueueNode* LinkedListQueue::peek()
 {
 	if (!isEmpty())
 	{
@@ -70,7 +70,7 @@ QueueNode* LinkedQueue::peek()
 	std::cout << "peek 실패." << std::endl;
 }
 
-void LinkedQueue::deleteQueue()
+void LinkedListQueue::deleteQueue()
 {
 	QueueNode* pDelNode = nullptr;
 	while (pFrontNode != nullptr)
@@ -81,14 +81,14 @@ void LinkedQueue::deleteQueue()
 	}
 }
 
-bool LinkedQueue::isEmpty()
+bool LinkedListQueue::isEmpty()
 {
 	if (currentElementCount == 0)
 		return true;
 	return false;
 }
 
-void LinkedQueue::displayQueue()
+void LinkedListQueue::displayQueue()
 {
 	QueueNode* pCurNode = pFrontNode;
 	int i = 0;

@@ -7,3 +7,7 @@
 int* shortestPathDijkstra(LinkedGraph* pGraph, int startVertexID);
 int getMinDistance(int* distance, bool* isSelected, int maxNodeCount);
 int getEdgeWeight(LinkedGraph* pGraph, int fromVertexID, int toVertexID);
+
+int** shortestPathFloyd(LinkedGraph* pGraph);
+int** pathReachability(LinkedGraph* pGraph);
+void printMatrix(int** A, int maxNodeCount);

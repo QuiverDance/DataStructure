@@ -104,3 +104,109 @@ int getEdgeWeight(LinkedGraph* pGraph, int fromVertexID, int toVertexID)
 	}
 	return MAX_INT;
 }
+
+int** shortestPathFloyd(LinkedGraph* pGraph)
+{
+	if (pGraph == nullptr)
+		return NULL;
+	int** pShortestPath = nullptr;
+	int maxCount = pGraph->getMaxVertexCount();
+	pShortestPath = new int* [maxCount];
+	if (!pShortestPath)
+		return nullptr;
+
+	for (int r = 0; r < maxCount; r++)
+	{
+		pShortestPath[r] = new int[maxCount];
+		if (!pShortestPath[r])
+			return nullptr;
+	}
+
+	for (int r = 0; r < maxCount; r++)
+	{
+		for (int s = 0; s < maxCount; s++)
+		{
+			if (r == s)
+				pShortestPath[r][s] = 0;
+			else
+				pShortestPath[r][s] = getEdgeWeight(pGraph, r, s);
+		}
+	}
+	printMatrix(pShortestPath, maxCount);
+
+	for (int v = 0; v < maxCount; v++)
+	{
+		for (int r = 0; r < maxCount; r++)
+		{
+			for (int s = 0; s < maxCount; s++)
+			{
+				if (pShortestPath[r][v] + pShortestPath[v][s] < pShortestPath[r][s])
+					pShortestPath[r][s] = pShortestPath[r][v] + pShortestPath[v][s];
+			}
+		}
+		std::cout << "[" << v + 1 << "]" << std::endl;
+		printMatrix(pShortestPath, maxCount);
+	}
+	return pShortestPath;
+}
+
+int** pathReachability(LinkedGraph* pGraph)
+{
+	if (pGraph == nullptr)
+		return NULL;
+	int** pShortestPath = nullptr;
+	int maxCount = pGraph->getMaxVertexCount();
+	pShortestPath = new int* [maxCount];
+	if (!pShortestPath)
+		return nullptr;
+
+	for (int r = 0; r < maxCount; r++)
+	{
+		pShortestPath[r] = new int[maxCount];
+		if (!pShortestPath[r])
+			return nullptr;
+	}
+
+	for (int r = 0; r < maxCount; r++)
+	{
+		for (int s = 0; s < maxCount; s++)
+		{
+			if (getEdgeWeight(pGraph, r, s) < MAX_INT)
+				pShortestPath[r][s] = 1;
+			else
+			pShortestPath[r][s] = 0;
+		}
+	}
+
+	for (int v = 0; v < maxCount; v++)
+	{
+		for (int r = 0; r < maxCount; r++)
+		{
+			if (pShortestPath[r][v] > 0)
+			{
+				for (int s = 0; s < maxCount; s++)
+				{
+					if (pShortestPath[v][s] > 0)
+						pShortestPath[r][s] = 1;
+				}
+			}
+		}
+	}
+	printMatrix(pShortestPath, maxCount);
+	return pShortestPath;
+}
+
+void printMatrix(int** A, int maxNodeCount)
+{
+	if (A == nullptr)
+		return;
+
+	for (int i = 0; i < maxNodeCount; i++)
+	{
+		for (int j = 0; j < maxNodeCount; j++)
+		{
+			std::cout << A[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+}

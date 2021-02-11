@@ -1,6 +1,6 @@
 #include "ArrayQueue.h"
 #include <iostream>
-
+/*
 int main(void)
 {
 	ArrayQueue queue = ArrayQueue(10);
@@ -40,4 +40,4 @@ int main(void)
 		queue.enqueue(node);
 	}
 	queue.displayQueue();
-} 
+} */

@@ -34,6 +34,8 @@
     <ClCompile Include="Graph\LinkedGraphTest.cpp" />
     <ClCompile Include="Graph\MinSpanningTree.cpp" />
     <ClCompile Include="Graph\MinSpanningTreeTest.cpp" />
+    <ClCompile Include="Graph\ShortestPath.cpp" />
+    <ClCompile Include="Graph\ShortestPathTest.cpp" />
     <ClCompile Include="Queue\ArrayQueue.cpp" />
     <ClCompile Include="Queue\ArrayQueueTest.cpp" />
     <ClCompile Include="Queue\LikedListQueueTest.cpp" />
@@ -67,6 +69,7 @@
     <ClInclude Include="Graph\GraphLinkedStack.h" />
     <ClInclude Include="Graph\MinSpanningTree.h" />
     <ClInclude Include="Graph\LinkedGraph.h" />
+    <ClInclude Include="Graph\ShortestPath.h" />
     <ClInclude Include="Queue\ArrayQueue.h" />
     <ClInclude Include="Queue\LinkedListQueue.h" />
     <ClInclude Include="RinkedList\CircularLinkedList.h" />
