@@ -46,6 +46,8 @@
     <ClCompile Include="RinkedList\DoublyLinkedListTest.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedList.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedListTest.cpp" />
+    <ClCompile Include="Sort\Sort.cpp" />
+    <ClCompile Include="Sort\SortTest.cpp" />
     <ClCompile Include="Stack\ArrayStack.cpp" />
     <ClCompile Include="Stack\ArrayStackTest.cpp" />
     <ClCompile Include="Stack\Exprdef.cpp" />
@@ -75,6 +77,7 @@
     <ClInclude Include="RinkedList\CircularLinkedList.h" />
     <ClInclude Include="RinkedList\DoublyLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
+    <ClInclude Include="Sort\Sort.h" />
     <ClInclude Include="Stack\ArrayStack.h" />
     <ClInclude Include="Stack\Exprdef.h" />
     <ClInclude Include="Stack\LinkedListStack.h" />
