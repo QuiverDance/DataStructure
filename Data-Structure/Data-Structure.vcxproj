@@ -46,6 +46,9 @@
     <ClCompile Include="RinkedList\DoublyLinkedListTest.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedList.cpp" />
     <ClCompile Include="RinkedList\SimpleLinkedListTest.cpp" />
+    <ClCompile Include="Search\ChainingHashing.cpp" />
+    <ClCompile Include="Search\ChainingHasingTest.cpp" />
+    <ClCompile Include="Search\HasingLinkedList.cpp" />
     <ClCompile Include="Search\StaticHashing.cpp" />
     <ClCompile Include="Search\StaticHashingTest.cpp" />
     <ClCompile Include="Sort\Sort.cpp" />
@@ -81,6 +84,8 @@
     <ClInclude Include="RinkedList\CircularLinkedList.h" />
     <ClInclude Include="RinkedList\DoublyLinkedList.h" />
     <ClInclude Include="RinkedList\SimpleLinkedList.h" />
+    <ClInclude Include="Search\ChainingHashing.h" />
+    <ClInclude Include="Search\HashingLinkedList.h" />
     <ClInclude Include="Search\StaticHashing.h" />
     <ClInclude Include="Sort\Sort.h" />
     <ClInclude Include="Sort\SortHeap.h" />
