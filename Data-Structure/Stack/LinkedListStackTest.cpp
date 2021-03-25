@@ -1,6 +1,6 @@
 #include "LinkedListStack.h"
 #include <iostream>
-/*
+
 int main(void)
 {
 	LinkedListStack arrStack = LinkedListStack();
@@ -20,4 +20,4 @@ int main(void)
 
 	arrStack.deleteStack();
 	arrStack.displayStack();
-}*/
+}
