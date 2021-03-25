@@ -1,6 +1,6 @@
 #include "ArrayStack.h"
 #include <iostream>
-/*
+
 int main(void)
 {
 	ArrayStack arrStack = ArrayStack(10);
@@ -20,4 +20,4 @@ int main(void)
 
 	arrStack.deleteStack();
 	arrStack.displayStack();
-}*/
+}
