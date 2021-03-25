@@ -1,6 +1,6 @@
 #include "MinSpanningTree.h"
 #include <iostream>
-/*
+
 int main(void)
 {
     LinkedGraph* pG1 = nullptr;
@@ -36,4 +36,4 @@ int main(void)
         delete pMST1;
         delete pMST2;
     }
-}*/
+}
