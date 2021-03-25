@@ -1,6 +1,6 @@
 #include "LinkedListDeque.h"
 #include <iostream>
-/*
+
 int main(void)
 {
 	LinkedDeque* deque = new LinkedDeque();
@@ -26,4 +26,4 @@ int main(void)
 	std::cout << "Peek Front : " << deque->peekFront()->data << std::endl;
 	std::cout << "Peek Rear : " << deque->peekRear()->data << std::endl;
 	deque->displayDeque();
-}*/
+}
