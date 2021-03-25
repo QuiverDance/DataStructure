@@ -32,10 +32,10 @@ void LinkedListQueue::enqueue(QueueNode element)
 			pRearNode = pNewNode;
 		}
 		currentElementCount++;
-		std::cout << "Enqueue 己傍." << std::endl;
+		std::cout << "Enqueue 靹标车." << std::endl;
 		return;
 	}
-	std::cout << "Enqueue 角菩." << std::endl;
+	std::cout << "Enqueue 鞁ろ尐." << std::endl;
 }
 
 QueueNode* LinkedListQueue::dequeue()
@@ -53,10 +53,10 @@ QueueNode* LinkedListQueue::dequeue()
 		if (isEmpty())
 			pRearNode = nullptr;
 
-		std::cout << "Dequeue 己傍." << std::endl;
+		std::cout << "Dequeue 靹标车." << std::endl;
 		return pDeQueueNode;
 	}
-	std::cout << "Dequeue 角菩." << std::endl;
+	std::cout << "Dequeue 鞁ろ尐." << std::endl;
 }
 
 QueueNode* LinkedListQueue::peek()
@@ -64,10 +64,10 @@ QueueNode* LinkedListQueue::peek()
 	if (!isEmpty())
 	{
 		QueueNode* pPeekNode = pFrontNode;
-		std::cout << "peek 己傍." << std::endl;
+		std::cout << "peek 靹标车." << std::endl;
 		return pFrontNode;
 	}
-	std::cout << "peek 角菩." << std::endl;
+	std::cout << "peek 鞁ろ尐." << std::endl;
 }
 
 void LinkedListQueue::deleteQueue()
@@ -92,7 +92,7 @@ void LinkedListQueue::displayQueue()
 {
 	QueueNode* pCurNode = pFrontNode;
 	int i = 0;
-	
+
 	while (pCurNode != nullptr)
 	{
 		std::cout << i << " Data: " << pCurNode->data << std::endl;
