@@ -1,6 +1,6 @@
 #include "LinkedListQueue.h"
 #include <iostream>
-/*
+
 int main(void)
 {
 	LinkedQueue* queue = new LinkedQueue();
@@ -21,4 +21,4 @@ int main(void)
 
 	queue->displayQueue();
 	delete queue;
-}*/
+}
