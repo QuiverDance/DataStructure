@@ -1,6 +1,6 @@
 #include "ArrayList.h"
 #include <iostream>
-/*
+
 int main(void)
 {
 	ArrayList arrayList = ArrayList(10);
@@ -18,7 +18,7 @@ int main(void)
 	arrayList.addElement(4, node);
 	arrayList.displayList();
 	std::cout << arrayList.isFull() << std::endl;
-	std::cout << "¸®½ºÆ® ±æÀÌ : " << arrayList.getListLength() << std::endl;
+	std::cout << "Â¸Â®Â½ÂºÃ†Â® Â±Ã¦Ã€ÃŒ : " << arrayList.getListLength() << std::endl;
 
 	for (int i = 0; i < arrayList.getListLength(); i++)
 	{
@@ -28,4 +28,3 @@ int main(void)
 	arrayList.deleteList();
 	arrayList.displayList();
 }
-*/
