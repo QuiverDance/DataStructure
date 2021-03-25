@@ -1,5 +1,5 @@
 #include "ArrayGraph.h"
-/*
+
 int main(void)
 {
 	ArrayGraph* graph1 = new ArrayGraph(6, undirected);
@@ -50,4 +50,4 @@ int main(void)
 	delete graph1;
 	delete graph2;
 	delete graph3;
-}*/
+}
