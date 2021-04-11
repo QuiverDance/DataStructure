@@ -19,7 +19,7 @@ void BinSearchTree::insertElement(BinSearchTreeNode element)
 	{
 		if (element.key == pParentNode->key)
 		{
-			std::cout << "Áßº¹µÈ Å°." << std::endl;
+			std::cout << "ì¤‘ë³µëœ í‚¤." << std::endl;
 			return;
 		}
 		else if(element.key < pParentNode->key)
@@ -53,10 +53,10 @@ void BinSearchTree::insertElement(BinSearchTreeNode element)
 			else
 				pParentNode->pRightChild = pNewNode;
 		}
-		std::cout << "µ¥ÀÌÅÍ Ãß°¡ ¼º°ø." << std::endl;
+		std::cout << "ë°ì´í„° ì¶”ê°€ ì„±ê³µ." << std::endl;
 		return;
 	}
-	std::cout << "µ¥ÀÌÅÍ Ãß°¡ ½ÇÆÐ." << std::endl;
+	std::cout << "ë°ì´í„° ì¶”ê°€ ì‹¤íŒ¨." << std::endl;
 }
 
 void BinSearchTree::deleteElement(int key)
@@ -75,7 +75,7 @@ void BinSearchTree::deleteElement(int key)
 	}
 	if (pDelNode == nullptr)
 	{
-		std::cout << "Á¸ÀçÇÏÁö ¾Ê´Â Å°." << std::endl;
+		std::cout << "ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” í‚¤." << std::endl;
 		return;
 	}
 	
@@ -102,8 +102,10 @@ void BinSearchTree::deleteElement(int key)
 			pPredecessor = pSuccessor;
 			pSuccessor = pSuccessor->pRightChild;
 		}
-
-		pPredecessor->pRightChild = pSuccessor->pLeftChild;
+		if(pPredecessor->pLeftChild == pSuccessor)
+			pPredecessor->pLeftChild = pSuccessor->pLeftChild;
+		else
+			pPredecessor->pRightChild = pSuccessor->pLeftChild;
 		pSuccessor->pLeftChild = pDelNode->pLeftChild;
 		pSuccessor->pRightChild = pDelNode->pRightChild;
 
@@ -136,7 +138,7 @@ void BinSearchTree::deleteElement(int key)
 		}
 	}
 	delete pDelNode;
-	std::cout << "µ¥ÀÌÅÍ Á¦°Å ¼º°ø." << std::endl;
+	std::cout << "ë°ì´í„° ì œê±° ì„±ê³µ." << std::endl;
 	return;
 }
 
